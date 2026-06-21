@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Dagger moth tattoo flash placeholder">
+  <rect width="800" height="600" fill="#111116"/>
+  <path d="M400 70 450 292 400 530 350 292Z" fill="#d7d7de"/>
+  <path d="M400 70 420 292 400 530 380 292Z" fill="#292934"/>
+  <path d="M386 245C270 130 160 120 92 180c26 102 126 164 294 132Z" fill="#e85638"/>
+  <path d="M414 245c116-115 226-125 294-65-26 102-126 164-294 132Z" fill="#e85638"/>
+  <circle cx="318" cy="238" r="38" fill="#111116"/>
+  <circle cx="482" cy="238" r="38" fill="#111116"/>
+  <path d="M338 360h124" stroke="#24b8a6" stroke-width="18" stroke-linecap="round"/>
+  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">DAGGER MOTH</text>
+</svg>

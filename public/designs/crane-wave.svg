@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Crane wave tattoo flash placeholder">
+  <rect width="800" height="600" fill="#111116"/>
+  <circle cx="400" cy="250" r="150" fill="#172b2b"/>
+  <path d="M184 372c80-96 176-96 256 0 52 62 112 66 176 12" fill="none" stroke="#24b8a6" stroke-width="38" stroke-linecap="round"/>
+  <path d="M342 334c-48-72-28-152 66-214 2 104 30 166 96 196-68 34-120 40-162 18Z" fill="#f4f4f5"/>
+  <path d="M408 120c50 26 88 26 116 0-14 54-48 82-102 82Z" fill="#e85638"/>
+  <path d="M350 338c-38 34-76 55-114 64" stroke="#f4f4f5" stroke-width="14" stroke-linecap="round"/>
+  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">CRANE WAVE</text>
+</svg>

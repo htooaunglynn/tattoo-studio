@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Black rose tattoo flash placeholder">
+  <rect width="800" height="600" fill="#111116"/>
+  <circle cx="400" cy="250" r="150" fill="#21151a"/>
+  <path d="M400 148c-58 35-112 68-112 126 0 64 50 114 112 114s112-50 112-114c0-58-54-91-112-126Z" fill="#e85638"/>
+  <path d="M400 168c-33 44-70 72-70 112 0 38 30 68 70 68s70-30 70-68c0-40-37-68-70-112Z" fill="#111116"/>
+  <path d="M400 358c-8 72-24 120-60 162M400 358c8 72 24 120 60 162" fill="none" stroke="#f4f4f5" stroke-width="18" stroke-linecap="round"/>
+  <path d="M355 442c-54-10-88-34-106-73 54 2 91 21 106 73ZM445 442c54-10 88-34 106-73-54 2-91 21-106 73Z" fill="#24b8a6"/>
+  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">BLACK ROSE</text>
+</svg>

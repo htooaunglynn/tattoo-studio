@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sacred heart tattoo flash placeholder">
+  <rect width="800" height="600" fill="#111116"/>
+  <path d="M400 420C255 310 206 248 230 176c20-60 98-78 170-8 72-70 150-52 170 8 24 72-25 134-170 244Z" fill="#e85638"/>
+  <path d="M400 118V62M400 478v-56M244 156l-44-44M556 156l44-44M218 300h-66M582 300h66" stroke="#f4f4f5" stroke-width="18" stroke-linecap="round"/>
+  <path d="M316 296c48 32 120 32 168 0" fill="none" stroke="#111116" stroke-width="18" stroke-linecap="round"/>
+  <path d="M340 420c-16 45-36 75-78 96M460 420c16 45 36 75 78 96" stroke="#24b8a6" stroke-width="16" stroke-linecap="round"/>
+  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">SACRED HEART</text>
+</svg>

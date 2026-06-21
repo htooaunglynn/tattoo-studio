@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Moon serpent tattoo flash placeholder">
+  <rect width="800" height="600" fill="#111116"/>
+  <circle cx="400" cy="250" r="160" fill="#f4f4f5"/>
+  <circle cx="462" cy="210" r="158" fill="#111116"/>
+  <path d="M272 364c42-124 214-174 256-60 38 104-112 120-122 48-7-54 84-64 98-7" fill="none" stroke="#24b8a6" stroke-width="28" stroke-linecap="round"/>
+  <path d="M284 360c-34 12-58 30-74 56 42 10 76-2 102-36Z" fill="#24b8a6"/>
+  <circle cx="500" cy="324" r="8" fill="#111116"/>
+  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">MOON SERPENT</text>
+</svg>
