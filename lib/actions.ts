@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto"
 import { mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
 
+import { put } from "@vercel/blob"
 import { AuthError } from "next-auth"
 import { redirect } from "next/navigation"
 
@@ -21,7 +22,6 @@ import {
 } from "@/lib/server-store"
 
 const MAX_DESIGN_IMAGE_BYTES = 5 * 1024 * 1024
-const MAX_COOKIE_IMAGE_BYTES = 128 * 1024
 const ALLOWED_DESIGN_IMAGE_TYPES = new Map([
   ["image/jpeg", "jpg"],
   ["image/png", "png"],
@@ -44,14 +44,22 @@ async function saveDesignImage(value: FormDataEntryValue | null) {
     return { ok: false as const, error: "Design image must be 5 MB or smaller." }
   }
 
-  const bytes = Buffer.from(await value.arrayBuffer())
+  if (process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID) {
+    try {
+      const blob = await put(`designs/${randomUUID()}.${extension}`, value, {
+        access: "public",
+        addRandomSuffix: true,
+        contentType: value.type,
+      })
+
+      return { ok: true as const, image: blob.url }
+    } catch {
+      return { ok: false as const, error: "Could not upload image to Vercel Blob." }
+    }
+  }
 
   if (process.env.VERCEL) {
-    if (value.size > MAX_COOKIE_IMAGE_BYTES) {
-      return { ok: false as const, error: "On Vercel, demo image uploads must be 128 KB or smaller." }
-    }
-
-    return { ok: true as const, image: `data:${value.type};base64,${bytes.toString("base64")}` }
+    return { ok: false as const, error: "Vercel Blob is not configured. Add a Blob store to this project." }
   }
 
   try {
@@ -59,7 +67,7 @@ async function saveDesignImage(value: FormDataEntryValue | null) {
     const fileName = `${randomUUID()}.${extension}`
 
     await mkdir(uploadDir, { recursive: true })
-    await writeFile(path.join(uploadDir, fileName), bytes)
+    await writeFile(path.join(uploadDir, fileName), Buffer.from(await value.arrayBuffer()))
 
     return { ok: true as const, image: `/uploads/${fileName}` }
   } catch {
