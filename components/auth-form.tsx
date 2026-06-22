@@ -5,11 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Select } from "@/components/ui/select"
 import { loginAction, registerAction } from "@/lib/actions"
+import type { FlashMessage } from "@/lib/server-store"
 
 type AuthFormProps = {
   mode: "login" | "register"
-  message?: string | null
+  message?: FlashMessage | null
 }
 
 export function AuthForm({ mode, message }: AuthFormProps) {
@@ -25,8 +27,8 @@ export function AuthForm({ mode, message }: AuthFormProps) {
       </CardHeader>
       <CardContent>
         {message ? (
-          <Alert className="mb-5 border-red-500/30 bg-red-500/10">
-            <AlertDescription>{message}</AlertDescription>
+          <Alert className="mb-5 border-red-500/30 bg-red-500/10 text-red-200">
+            <AlertDescription className="text-red-200">{message.message}</AlertDescription>
           </Alert>
         ) : null}
         <form action={isRegister ? registerAction : loginAction} className="space-y-4">
@@ -50,6 +52,13 @@ export function AuthForm({ mode, message }: AuthFormProps) {
               minLength={8}
               required
             />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="role">Role</Label>
+            <Select id="role" name="role" defaultValue="user" required>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </Select>
           </div>
           <Button className="w-full uppercase" type="submit">
             {isRegister ? "Register" : "Login"}

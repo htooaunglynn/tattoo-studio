@@ -17,11 +17,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       credentials: {
         email: { type: "email", label: "Email" },
         password: { type: "password", label: "Password" },
+        role: { type: "text", label: "Role" },
       },
       async authorize(credentials) {
         const email = String(credentials?.email ?? "")
         const password = String(credentials?.password ?? "")
-        const user = await authenticateUserFromCookies(email, password)
+        const role = String(credentials?.role ?? "")
+        const user = await authenticateUserFromCookies(email, password, role)
 
         if (!user) {
           return null
@@ -31,6 +33,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           id: user.id,
           email: user.email,
           name: user.name,
+          role: user.role,
         }
       },
     }),
@@ -39,6 +42,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     jwt({ token, user }) {
       if (user) {
         token.id = user.id
+        token.role = user.role
       }
 
       return token
@@ -46,6 +50,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     session({ session, token }) {
       if (session.user) {
         session.user.id = String(token.id ?? "")
+        session.user.role = token.role === "admin" || token.role === "user" ? token.role : "user"
       }
 
       return session

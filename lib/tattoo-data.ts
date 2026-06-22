@@ -1,4 +1,5 @@
 export type SlotStatus = "available" | "booked" | "waitlist"
+export type Role = "admin" | "user"
 
 export type FlashDesign = {
   id: string
@@ -117,8 +118,8 @@ export function mergeSlotBookings(slots: BookingSlot[], bookings: Booking[]) {
   }))
 }
 
-export function findBookableSlot(slotId: string, bookings: Booking[], start = new Date()) {
-  const slot = mergeSlotBookings(generateSlots(start), bookings).find((candidate) => candidate.id === slotId)
+export function findBookableSlot(slotId: string, slots: BookingSlot[], bookings: Booking[]) {
+  const slot = mergeSlotBookings(slots, bookings).find((candidate) => candidate.id === slotId)
 
   if (!slot || slot.status === "booked") {
     return null

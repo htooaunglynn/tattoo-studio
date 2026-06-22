@@ -21,6 +21,6 @@ describe("slot helpers", () => {
     ])
 
     expect(merged.find((slot) => slot.id === available!.id)?.status).toBe("booked")
-    expect(findBookableSlot(available!.id, [{ id: "booking-1", userEmail: "client@example.com", designId: "black-rose", slotId: available!.id, createdAt: "now" }], new Date("2026-06-21T12:00:00.000Z"))).toBeNull()
+    expect(findBookableSlot(available!.id, slots, [{ id: "booking-1", userEmail: "client@example.com", designId: "black-rose", slotId: available!.id, createdAt: "now" }])).toBeNull()
   })
 })

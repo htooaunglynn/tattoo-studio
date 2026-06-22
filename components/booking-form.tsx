@@ -5,11 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label"
 import { Select } from "@/components/ui/select"
 import { bookingAction } from "@/lib/actions"
-import type { BookingSlot } from "@/lib/tattoo-data"
-import { flashDesigns } from "@/lib/tattoo-data"
+import type { BookingSlot, FlashDesign } from "@/lib/tattoo-data"
 
-export function BookingForm({ slots, userEmail }: { slots: BookingSlot[]; userEmail: string }) {
+export function BookingForm({ designs, slots }: { designs: FlashDesign[]; slots: BookingSlot[] }) {
   const bookableSlots = slots.filter((slot) => slot.status !== "booked")
+  const canBook = designs.length > 0 && bookableSlots.length > 0
 
   return (
     <Card className="border-zinc-800 bg-zinc-950/90">
@@ -22,11 +22,11 @@ export function BookingForm({ slots, userEmail }: { slots: BookingSlot[]; userEm
       </CardHeader>
       <CardContent>
         <form action={bookingAction} className="space-y-4">
-          <input name="userEmail" type="hidden" value={userEmail} />
           <div className="space-y-2">
             <Label htmlFor="designId">Design</Label>
-            <Select id="designId" name="designId" required>
-              {flashDesigns.map((design) => (
+            <Select id="designId" name="designId" required disabled={designs.length === 0}>
+              {designs.length === 0 ? <option value="">No designs yet</option> : null}
+              {designs.map((design) => (
                 <option key={design.id} value={design.id}>
                   {design.name} - {design.price}
                 </option>
@@ -35,7 +35,8 @@ export function BookingForm({ slots, userEmail }: { slots: BookingSlot[]; userEm
           </div>
           <div className="space-y-2">
             <Label htmlFor="slotId">Date and time</Label>
-            <Select id="slotId" name="slotId" required>
+            <Select id="slotId" name="slotId" required disabled={bookableSlots.length === 0}>
+              {bookableSlots.length === 0 ? <option value="">No bookable slots yet</option> : null}
               {bookableSlots.map((slot) => (
                 <option key={slot.id} value={slot.id}>
                   {slot.date} at {slot.time} with {slot.artist} ({slot.status})
@@ -43,7 +44,7 @@ export function BookingForm({ slots, userEmail }: { slots: BookingSlot[]; userEm
               ))}
             </Select>
           </div>
-          <Button type="submit" className="w-full uppercase">
+          <Button type="submit" className="w-full uppercase" disabled={!canBook}>
             Submit Booking
           </Button>
         </form>
