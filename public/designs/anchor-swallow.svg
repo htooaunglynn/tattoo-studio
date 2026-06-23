@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Anchor Swallow Tattoo Flash</title>
+  <desc id="desc">Nautical anchor with two swallow birds.</desc>
+  <rect width="640" height="480" fill="#06111f"/>
+  <g stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M320 86v254" stroke="#93c5fd" stroke-width="16"/>
+    <circle cx="320" cy="84" r="42" fill="none" stroke="#93c5fd" stroke-width="12"/>
+    <path d="M231 184h178" stroke="#93c5fd" stroke-width="14"/>
+    <path d="M209 317c35 88 187 88 222 0" fill="none" stroke="#93c5fd" stroke-width="16"/>
+    <path d="M207 317l-44 47 67 5M433 317l44 47-67 5" fill="none" stroke="#93c5fd" stroke-width="12"/>
+    <path d="M181 161c-46-23-86-21-119 6 39 21 76 19 119-6Z" fill="#38bdf8" stroke-width="5"/>
+    <path d="M181 161c-31 25-46 55-45 90 37-22 52-52 45-90Z" fill="#ef4444" stroke-width="5"/>
+    <path d="M459 161c46-23 86-21 119 6-39 21-76 19-119-6Z" fill="#38bdf8" stroke-width="5"/>
+    <path d="M459 161c31 25 46 55 45 90-37-22-52-52-45-90Z" fill="#ef4444" stroke-width="5"/>
+    <path d="M181 161l50-22M459 161l-50-22" fill="none" stroke-width="5"/>
+  </g>
+</svg>

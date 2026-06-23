@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Skull Flame Tattoo Flash</title>
+  <desc id="desc">Bold skull tattoo flash with orange flames.</desc>
+  <rect width="640" height="480" fill="#0a0a0a"/>
+  <g stroke="#f8fafc" stroke-linejoin="round">
+    <path d="M320 87c-47 50-61 98-34 144-45-22-74-54-86-98-48 75-35 142 39 202h162c74-60 87-127 39-202-12 44-41 76-86 98 27-46 13-94-34-144Z" fill="#f97316" stroke-width="6"/>
+    <path d="M320 143c-80 0-131 51-131 126 0 54 29 95 75 115v45h112v-45c46-20 75-61 75-115 0-75-51-126-131-126Z" fill="#e5e7eb" stroke-width="8"/>
+    <path d="M255 265c0-29 20-50 48-50 0 39-18 59-48 50ZM385 265c0-29-20-50-48-50 0 39 18 59 48 50Z" fill="#111827" stroke-width="5"/>
+    <path d="M320 276l-28 47h56l-28-47Z" fill="#111827" stroke-width="5"/>
+    <path d="M268 376h104M286 376v45M320 376v45M354 376v45" fill="none" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

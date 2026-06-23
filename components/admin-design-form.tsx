@@ -3,7 +3,9 @@ import { Palette } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Select } from "@/components/ui/select"
 import { createDesignAction } from "@/lib/actions"
+import { designImageOptions } from "@/lib/tattoo-data"
 
 export function AdminDesignForm() {
   return (
@@ -41,8 +43,14 @@ export function AdminDesignForm() {
           </div>
         </div>
         <div className="space-y-2">
-          <Label htmlFor="image">Image upload</Label>
-          <Input id="image" name="image" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" required />
+          <Label htmlFor="image">Design image</Label>
+          <Select id="image" name="image" required>
+            {designImageOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </Select>
         </div>
         <Button type="submit" className="w-full uppercase">
           Create Design

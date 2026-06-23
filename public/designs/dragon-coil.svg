@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Dragon Coil Tattoo Flash</title>
+  <desc id="desc">Coiling dragon tattoo flash with red scales and gold horns.</desc>
+  <rect width="640" height="480" fill="#0f0f12"/>
+  <g fill="none" stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M435 116c-110-37-213 9-248 88-39 88 24 165 113 156 75-8 105-75 68-122-33-41-102-27-116 27-12 48 37 88 91 71 47-15 83-57 94-117" stroke="#dc2626" stroke-width="26"/>
+    <path d="M435 116c34 9 59 33 73 72-46 4-75-20-73-72Z" fill="#dc2626" stroke-width="7"/>
+    <path d="M460 100l50-45M479 124l60-16" stroke="#facc15" stroke-width="8"/>
+    <path d="M462 139l-42 23M392 110l-29 39M323 122l-20 42M252 163l-9 45M238 245l-44 14M278 322l-31 36M363 337l28 41" stroke-width="5"/>
+    <path d="M465 158c21 3 38 18 50 45-27 3-47-12-50-45Z" fill="#f97316" stroke-width="5"/>
+  </g>
+  <circle cx="463" cy="129" r="6" fill="#facc15"/>
+</svg>

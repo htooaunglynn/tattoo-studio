@@ -1,10 +1,5 @@
 "use server"
 
-import { randomUUID } from "node:crypto"
-import { mkdir, writeFile } from "node:fs/promises"
-import path from "node:path"
-
-import { put } from "@vercel/blob"
 import { AuthError } from "next-auth"
 import { redirect } from "next/navigation"
 
@@ -20,68 +15,6 @@ import {
   updateDesignInCookies,
   updateSlotInCookies,
 } from "@/lib/server-store"
-
-const MAX_DESIGN_IMAGE_BYTES = 5 * 1024 * 1024
-const ALLOWED_DESIGN_IMAGE_TYPES = new Map([
-  ["image/jpeg", "jpg"],
-  ["image/png", "png"],
-  ["image/svg+xml", "svg"],
-  ["image/webp", "webp"],
-])
-
-async function saveDesignImage(value: FormDataEntryValue | null) {
-  if (!(value instanceof File) || value.size === 0) {
-    return { ok: false as const, error: "Upload a design image." }
-  }
-
-  const extension = ALLOWED_DESIGN_IMAGE_TYPES.get(value.type)
-
-  if (!extension) {
-    return { ok: false as const, error: "Design image must be a PNG, JPG, SVG, or WebP file." }
-  }
-
-  if (value.size > MAX_DESIGN_IMAGE_BYTES) {
-    return { ok: false as const, error: "Design image must be 5 MB or smaller." }
-  }
-
-  if (process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID) {
-    try {
-      const blob = await put(`designs/${randomUUID()}.${extension}`, value, {
-        access: "public",
-        addRandomSuffix: true,
-        contentType: value.type,
-      })
-
-      return { ok: true as const, image: blob.url }
-    } catch {
-      return { ok: false as const, error: "Could not upload image to Vercel Blob." }
-    }
-  }
-
-  if (process.env.VERCEL) {
-    return { ok: false as const, error: "Vercel Blob is not configured. Add a Blob store to this project." }
-  }
-
-  try {
-    const uploadDir = path.join(process.cwd(), "public", "uploads")
-    const fileName = `${randomUUID()}.${extension}`
-
-    await mkdir(uploadDir, { recursive: true })
-    await writeFile(path.join(uploadDir, fileName), Buffer.from(await value.arrayBuffer()))
-
-    return { ok: true as const, image: `/uploads/${fileName}` }
-  } catch {
-    return { ok: false as const, error: "Could not save the uploaded image." }
-  }
-}
-
-async function optionalSaveDesignImage(value: FormDataEntryValue | null) {
-  if (!(value instanceof File) || value.size === 0) {
-    return { ok: true as const, image: undefined }
-  }
-
-  return saveDesignImage(value)
-}
 
 async function requireAdmin(errorMessage: string) {
   const session = await auth()
@@ -153,19 +86,12 @@ export async function bookingAction(formData: FormData) {
 export async function createDesignAction(formData: FormData) {
   await requireAdmin("Only admins can create designs.")
 
-  const image = await saveDesignImage(formData.get("image"))
-
-  if (!image.ok) {
-    await flashMessage(image.error, "error")
-    redirect("/dashboard")
-  }
-
   const result = await createDesignInCookies({
     name: String(formData.get("name") ?? ""),
     style: String(formData.get("style") ?? ""),
     duration: String(formData.get("duration") ?? ""),
     price: String(formData.get("price") ?? ""),
-    image: image.image,
+    image: String(formData.get("image") ?? ""),
   })
 
   await flashMessage(result.ok ? "Design created." : result.error, result.ok ? "success" : "error")
@@ -189,20 +115,13 @@ export async function createSlotAction(formData: FormData) {
 export async function updateDesignAction(formData: FormData) {
   await requireAdmin("Only admins can update designs.")
 
-  const image = await optionalSaveDesignImage(formData.get("image"))
-
-  if (!image.ok) {
-    await flashMessage(image.error, "error")
-    redirect("/dashboard")
-  }
-
   const result = await updateDesignInCookies({
     id: String(formData.get("id") ?? ""),
     name: String(formData.get("name") ?? ""),
     style: String(formData.get("style") ?? ""),
     duration: String(formData.get("duration") ?? ""),
     price: String(formData.get("price") ?? ""),
-    image: image.image,
+    image: String(formData.get("image") ?? ""),
   })
 
   await flashMessage(result.ok ? "Design updated." : result.error, result.ok ? "success" : "error")

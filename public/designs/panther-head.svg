@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Panther Head Tattoo Flash</title>
+  <desc id="desc">Traditional roaring black panther head tattoo flash.</desc>
+  <rect width="640" height="480" fill="#0b0b0f"/>
+  <g stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M204 166c45-90 187-109 259-30 56 61 41 159-20 220-67 68-174 65-239-2-47-48-57-122 0-188Z" fill="#111827" stroke-width="8"/>
+    <path d="M226 169l-28-82 78 36M413 126l76-36-26 82" fill="#111827" stroke-width="7"/>
+    <path d="M246 231c30-34 68-40 111-18-43 6-79 12-111 18ZM394 215c28-19 57-14 88 15-31-4-60-9-88-15Z" fill="#f8fafc" stroke-width="5"/>
+    <circle cx="294" cy="224" r="9" fill="#facc15"/>
+    <circle cx="438" cy="224" r="9" fill="#facc15"/>
+    <path d="M351 252l-35 45 42 6 42-6-35-45h-14Z" fill="#dc2626" stroke-width="5"/>
+    <path d="M270 330c55 43 119 43 174 0" fill="none" stroke-width="8"/>
+    <path d="M296 333l14 54M340 343l-3 59M384 342l-19 58M235 256l-76-26M237 286l-84 11M472 256l76-26M470 286l84 11" fill="none" stroke-width="5"/>
+  </g>
+</svg>

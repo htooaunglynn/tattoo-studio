@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Dagger moth tattoo flash placeholder">
-  <rect width="800" height="600" fill="#111116"/>
-  <path d="M400 70 450 292 400 530 350 292Z" fill="#d7d7de"/>
-  <path d="M400 70 420 292 400 530 380 292Z" fill="#292934"/>
-  <path d="M386 245C270 130 160 120 92 180c26 102 126 164 294 132Z" fill="#e85638"/>
-  <path d="M414 245c116-115 226-125 294-65-26 102-126 164-294 132Z" fill="#e85638"/>
-  <circle cx="318" cy="238" r="38" fill="#111116"/>
-  <circle cx="482" cy="238" r="38" fill="#111116"/>
-  <path d="M338 360h124" stroke="#24b8a6" stroke-width="18" stroke-linecap="round"/>
-  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">DAGGER MOTH</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Dagger Moth Tattoo Flash</title>
+  <desc id="desc">Neo traditional moth with a dagger tattoo flash design.</desc>
+  <rect width="640" height="480" fill="#0c0a09"/>
+  <g fill="none" stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M320 60v344" stroke-width="10"/>
+    <path d="M286 94h68l-34-46-34 46Z" fill="#d6d3d1" stroke-width="5"/>
+    <path d="M292 358h56l-28 64-28-64Z" fill="#d6d3d1" stroke-width="5"/>
+    <path d="M320 113c-26 44-37 92-31 143 20 18 43 18 62 0 6-51-5-99-31-143Z" fill="#1f2937" stroke-width="5"/>
+    <path d="M288 184c-62-67-130-79-204-36 28 83 94 121 204 36Z" fill="#f59e0b" stroke-width="6"/>
+    <path d="M352 184c62-67 130-79 204-36-28 83-94 121-204 36Z" fill="#f59e0b" stroke-width="6"/>
+    <path d="M294 262c-65 53-121 63-169 28 33-70 89-80 169-28Z" fill="#dc2626" stroke-width="6"/>
+    <path d="M346 262c65 53 121 63 169 28-33-70-89-80-169-28Z" fill="#dc2626" stroke-width="6"/>
+    <path d="M172 159l70 39M468 159l-70 39M176 287l76-35M464 287l-76-35" stroke-width="5"/>
+  </g>
+  <circle cx="320" cy="178" r="28" fill="#f8fafc"/>
+  <circle cx="320" cy="178" r="12" fill="#111827"/>
 </svg>

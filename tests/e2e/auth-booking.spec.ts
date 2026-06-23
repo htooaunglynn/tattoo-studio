@@ -22,11 +22,7 @@ test("admin creates inventory and user books it", async ({ page }) => {
   await page.getByLabel("Style").fill("Fine line botanical")
   await page.getByLabel("Duration").fill("90")
   await page.getByLabel("Price").fill("180")
-  await page.getByLabel("Image upload").setInputFiles({
-    name: "black-rose.svg",
-    mimeType: "image/svg+xml",
-    buffer: Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="black"/></svg>'),
-  })
+  await page.getByLabel("Design image").selectOption("/designs/black-rose.svg")
   await designDialog.getByRole("button", { name: "Create Design" }).click()
   await expect(page.getByText("Design created.")).toBeVisible()
   await expect(page.getByRole("heading", { name: "Black Rose" })).toBeVisible()

@@ -3,8 +3,9 @@ import { Pencil } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Select } from "@/components/ui/select"
 import { updateDesignAction } from "@/lib/actions"
-import type { FlashDesign } from "@/lib/tattoo-data"
+import { designImageOptions, type FlashDesign } from "@/lib/tattoo-data"
 
 function stripDurationSuffix(value: string) {
   return value.replace(/\s*min$/i, "").trim()
@@ -67,8 +68,14 @@ export function AdminDesignEditForm({ design }: { design: FlashDesign }) {
           </div>
         </div>
         <div className="space-y-2">
-          <Label htmlFor={`design-image-${design.id}`}>Replace image</Label>
-          <Input id={`design-image-${design.id}`} name="image" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" />
+          <Label htmlFor={`design-image-${design.id}`}>Design image</Label>
+          <Select id={`design-image-${design.id}`} name="image" defaultValue={design.image} required>
+            {designImageOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </Select>
         </div>
         <Button type="submit" className="w-full uppercase">
           Update Design

@@ -7,6 +7,7 @@ import {
   type FlashDesign,
   type Role,
   type SlotStatus,
+  designImageOptions,
   findBookableSlot,
 } from "@/lib/tattoo-data"
 
@@ -66,6 +67,10 @@ function normalizeDuration(value: string) {
 function normalizePrice(value: string) {
   const price = value.trim().replace(/^\$/, "").trim()
   return price ? `$${price}` : ""
+}
+
+function isAllowedDesignImage(image: string) {
+  return designImageOptions.some((option) => option.value === image)
 }
 
 export async function registerUserInState(
@@ -132,6 +137,10 @@ export function createDesignInState(
     return { ok: false as const, error: "Design name, style, duration, price, and image are required." }
   }
 
+  if (!isAllowedDesignImage(image)) {
+    return { ok: false as const, error: "Choose one of the available tattoo design images." }
+  }
+
   const baseId = slugify(name)
   const id = currentState.designs.some((design) => design.id === baseId) ? `${baseId}-${randomUUID().slice(0, 8)}` : baseId
   const design: FlashDesign = { id, name, style, duration, price, image }
@@ -170,6 +179,10 @@ export function updateDesignInState(
 
   if (!name || !style || !duration || !price || !image) {
     return { ok: false as const, error: "Design name, style, duration, price, and image are required." }
+  }
+
+  if (!isAllowedDesignImage(image)) {
+    return { ok: false as const, error: "Choose one of the available tattoo design images." }
   }
 
   const design: FlashDesign = { ...existing, name, style, duration, price, image }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Lotus Eye Tattoo Flash</title>
+  <desc id="desc">Ornamental lotus with an all seeing eye.</desc>
+  <rect width="640" height="480" fill="#101014"/>
+  <g stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M320 365c-95-42-150-92-166-151 69 2 123 33 166 93 43-60 97-91 166-93-16 59-71 109-166 151Z" fill="#a855f7" stroke-width="6"/>
+    <path d="M320 327c-66-67-75-129 0-189 75 60 66 122 0 189Z" fill="#ec4899" stroke-width="6"/>
+    <path d="M259 330c-68-20-102-62-101-126 52 17 90 58 101 126ZM381 330c68-20 102-62 101-126-52 17-90 58-101 126Z" fill="#7c3aed" stroke-width="6"/>
+    <path d="M198 189c82-72 162-72 244 0-82 72-162 72-244 0Z" fill="#f8fafc" stroke-width="7"/>
+    <circle cx="320" cy="189" r="42" fill="#38bdf8" stroke-width="6"/>
+    <circle cx="320" cy="189" r="18" fill="#111827" stroke-width="4"/>
+    <path d="M320 86v48M236 111l33 41M404 111l-33 41M169 189h51M420 189h51" fill="none" stroke-width="5"/>
+  </g>
+</svg>

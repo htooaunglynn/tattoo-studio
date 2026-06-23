@@ -140,6 +140,7 @@ describe("demo store integration", () => {
 
     expect(registered.ok).toBe(false)
     expect(createDesignInState(emptyState, { name: "", style: "Fine line", duration: "1 hr", price: "$100", image: "/designs/black-rose.svg" }).ok).toBe(false)
+    expect(createDesignInState(emptyState, { name: "Bad Image", style: "Fine line", duration: "1 hr", price: "$100", image: "/uploads/bad.svg" }).ok).toBe(false)
     expect(createSlotInState(emptyState, { date: "2026-07-01", time: "11:00 AM", artist: "Mara", status: "closed" }).ok).toBe(false)
     expect(createSlotInState(emptyState, { date: "2000-01-01", time: "11:00 AM", artist: "Mara", status: "available" }).ok).toBe(false)
   })

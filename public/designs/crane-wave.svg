@@ -1,9 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Crane wave tattoo flash placeholder">
-  <rect width="800" height="600" fill="#111116"/>
-  <circle cx="400" cy="250" r="150" fill="#172b2b"/>
-  <path d="M184 372c80-96 176-96 256 0 52 62 112 66 176 12" fill="none" stroke="#24b8a6" stroke-width="38" stroke-linecap="round"/>
-  <path d="M342 334c-48-72-28-152 66-214 2 104 30 166 96 196-68 34-120 40-162 18Z" fill="#f4f4f5"/>
-  <path d="M408 120c50 26 88 26 116 0-14 54-48 82-102 82Z" fill="#e85638"/>
-  <path d="M350 338c-38 34-76 55-114 64" stroke="#f4f4f5" stroke-width="14" stroke-linecap="round"/>
-  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">CRANE WAVE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Crane Wave Tattoo Flash</title>
+  <desc id="desc">Japanese inspired crane flying over curling waves.</desc>
+  <rect width="640" height="480" fill="#07111f"/>
+  <circle cx="455" cy="109" r="58" fill="#ef4444" stroke="#f8fafc" stroke-width="5"/>
+  <g fill="none" stroke="#f8fafc" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M107 332c74-75 147-75 220 0s146 75 220 0" stroke="#38bdf8" stroke-width="18"/>
+    <path d="M93 382c76-52 153-52 229 0s153 52 229 0" stroke="#93c5fd" stroke-width="12"/>
+    <path d="M330 205c-40-55-89-79-147-70 44 41 91 65 147 70Z" fill="#e5e7eb" stroke-width="6"/>
+    <path d="M333 205c65-44 122-51 171-20-53 23-110 30-171 20Z" fill="#e5e7eb" stroke-width="6"/>
+    <path d="M310 212c32-11 65-8 98 10-37 48-78 72-124 72 17-24 25-51 26-82Z" fill="#f8fafc" stroke-width="6"/>
+    <path d="M326 213c-10 45-1 83 27 115" stroke-width="6"/>
+    <path d="M382 146c-12-45 2-78 43-99 6 50-8 83-43 99Z" fill="#e5e7eb" stroke-width="6"/>
+    <path d="M401 76l30-34" stroke-width="5"/>
+  </g>
+  <circle cx="410" cy="89" r="5" fill="#111827"/>
 </svg>

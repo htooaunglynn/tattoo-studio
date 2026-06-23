@@ -26,6 +26,19 @@ export type Booking = {
   createdAt: string
 }
 
+export const designImageOptions = [
+  { label: "Black Rose", value: "/designs/black-rose.svg" },
+  { label: "Dagger Moth", value: "/designs/dagger-moth.svg" },
+  { label: "Moon Serpent", value: "/designs/moon-serpent.svg" },
+  { label: "Sacred Heart", value: "/designs/sacred-heart.svg" },
+  { label: "Crane Wave", value: "/designs/crane-wave.svg" },
+  { label: "Skull Flame", value: "/designs/skull-flame.svg" },
+  { label: "Lotus Eye", value: "/designs/lotus-eye.svg" },
+  { label: "Panther Head", value: "/designs/panther-head.svg" },
+  { label: "Anchor Swallow", value: "/designs/anchor-swallow.svg" },
+  { label: "Dragon Coil", value: "/designs/dragon-coil.svg" },
+] as const
+
 export const flashDesigns: FlashDesign[] = [
   {
     id: "black-rose",

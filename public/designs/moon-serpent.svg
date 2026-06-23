@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Moon serpent tattoo flash placeholder">
-  <rect width="800" height="600" fill="#111116"/>
-  <circle cx="400" cy="250" r="160" fill="#f4f4f5"/>
-  <circle cx="462" cy="210" r="158" fill="#111116"/>
-  <path d="M272 364c42-124 214-174 256-60 38 104-112 120-122 48-7-54 84-64 98-7" fill="none" stroke="#24b8a6" stroke-width="28" stroke-linecap="round"/>
-  <path d="M284 360c-34 12-58 30-74 56 42 10 76-2 102-36Z" fill="#24b8a6"/>
-  <circle cx="500" cy="324" r="8" fill="#111116"/>
-  <text x="400" y="548" text-anchor="middle" fill="#f4f4f5" font-family="Arial, sans-serif" font-size="44" font-weight="800">MOON SERPENT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Moon Serpent Tattoo Flash</title>
+  <desc id="desc">Blackwork serpent coiling around a crescent moon.</desc>
+  <rect width="640" height="480" fill="#030712"/>
+  <path d="M386 66c-86 35-145 119-145 217 0 52 17 100 46 139-83-31-142-111-142-205 0-121 98-219 219-219 7 0 15 0 22 2Z" fill="#e5e7eb"/>
+  <path d="M407 79c-80 34-136 113-136 205 0 46 14 88 38 123-51-38-84-98-84-166 0-92 60-171 143-198 14 8 27 20 39 36Z" fill="#030712"/>
+  <g fill="none" stroke="#f9fafb" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M411 125c-101 34-154 94-156 179-2 74 75 103 119 57 38-40 1-92-46-74-40 15-49 70-1 105 45 32 112 18 144-39" stroke-width="18"/>
+    <path d="M415 125c35 6 61 29 77 68-43 8-72-14-77-68Z" fill="#111827" stroke-width="6"/>
+    <path d="M437 146l31 35M319 289l-34 22M390 370l23 33" stroke-width="5"/>
+  </g>
+  <circle cx="448" cy="150" r="5" fill="#ef4444"/>
 </svg>
